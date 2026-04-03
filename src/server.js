@@ -18,9 +18,9 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ENV.CLIENT_URL,
-    credentials: true
-  }
+    origin: process.env.CLIENT_URL,
+    credentials: true,
+  },
 });
 
 // store code per session
